@@ -4,7 +4,6 @@ rm -f /tmp/firecracker.socket
 # then, start firecracker
 bin/firecracker --api-sock /tmp/firecracker.socket
 
-
 # set the guest kernel
 curl --unix-socket /tmp/firecracker.socket -i \
     -X PUT 'http://localhost/boot-source' \
